@@ -1,5 +1,6 @@
 import numpy as np
-
+from matplotlib import pyplot as plt
+plt.ion()
 
 
 def gauss(p,x):
