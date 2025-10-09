@@ -30,7 +30,10 @@ planck=np.loadtxt('COM_PowerSpect_CMB-TT-full_R3.01.txt',skiprows=1)
 ell=planck[:,0]
 spec=planck[:,1]
 errs=0.5*(planck[:,2]+planck[:,3]);
+t1=time.time()
 model=get_spectrum(pars)
+t2=time.time()
+print('camb took ',t2-t1,' seconds')
 model=model[:len(spec)]
 resid=spec-model
 chisq=np.sum( (resid/errs)**2)
