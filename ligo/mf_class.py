@@ -26,6 +26,6 @@ bot=np.sum(kernel**2)
 mf=np.fft.irfft(dft*np.conj(kft))/bot
 deconv=np.fft.irfft(dft/kft)
 plt.plot(x,deconv)
-plt.plot(x,mf)
+plt.plot(x,mf,'k')
 print('noises: ',np.median(np.abs(mf)),np.median(np.abs(deconv)))
 
