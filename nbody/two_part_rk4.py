@@ -76,7 +76,7 @@ x[0,0]=1
 x[1,0]=-1
 v[0,1]=0.25
 v[1,1]=-0.25
-#v=1.5*v
+v=0.5*v
 
 plt.ion()
 plt.clf()
@@ -93,8 +93,8 @@ plt.clf()
 for i in range(nstep):
     for j in range(nfine):
         #x,v=take_step_better(x,v,dt)
-        #x,v=take_step_rk4(x,v,dt)
-        x,v=take_step_simple(x,v,dt)
+        x,v=take_step_rk4(x,v,dt)
+        #x,v=take_step_simple(x,v,dt)
     f,pot=get_forces(x,do_pot=True,fail=True)
     kin=np.sum(v**2)/2
     all_pot[i]=pot

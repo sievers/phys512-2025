@@ -73,7 +73,7 @@ class Particles:
         
 
 
-n=30000
+n=10000
         
 #x=np.zeros([n,2])
 x=np.random.randn(n,2)
