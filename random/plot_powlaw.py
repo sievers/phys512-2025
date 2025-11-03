@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 
 plt.ion()
 N=1000000
-alpha=1.1
+alpha=1.5
 x=np.random.rand(N)
 s=x**(1/(1-alpha))
 
