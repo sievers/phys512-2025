@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-alpha=-1.5
+alpha=-2.0
 
 n=int(1e6)
 x=np.random.rand(n)
