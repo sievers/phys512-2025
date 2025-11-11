@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-osamp=100
+osamp=1000
 class Fluid:
     def __init__(self,npix=200,gamma=5.0/3.0,bc_type='periodic'):
         self.rho=numpy.zeros(npix)
