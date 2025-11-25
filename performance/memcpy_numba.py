@@ -13,6 +13,7 @@ def fill(b,a):
 n=10000
 a=np.random.randn(n,n)
 b=0*a
+fill(b,a)
 
 for i in range(10):
     t1=time.time()
