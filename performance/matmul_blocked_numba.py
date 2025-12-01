@@ -30,6 +30,7 @@ def matmul(a,b,c,bs=32):
         atmp=np.zeros((bs,bs))
         btmp=np.zeros((bs,bs))
         ctmp=np.zeros((bs,bs))
+
         for j in np.arange(nbl):
             ctmp[:]=0
             for k in range(nbl):
@@ -49,7 +50,7 @@ matmul(a,b,c,bs)
 #matmul_block(a,b,c,n)
 print('error: ',np.std(c-a@b))
 
-n=4096
+n=2048
 a=np.random.randn(n,n)
 b=np.random.randn(n,n)
 c=np.empty([n,n])

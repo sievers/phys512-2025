@@ -145,4 +145,4 @@ b1=np.load('biases1.npy')
 sizes=[wt0.shape[1],wt0.shape[0],wt1.shape[0]]
 
 net=Net(sizes)
-fracs=net.SGD(500,100,td0,td1,1000.0,vd0,vd1)
+fracs=net.SGD(50,100,td0,td1,1000.0,vd0,vd1)
