@@ -146,3 +146,22 @@ sizes=[wt0.shape[1],wt0.shape[0],wt1.shape[0]]
 
 net=Net(sizes)
 fracs=net.SGD(50,100,td0,td1,10000.0,vd0,vd1)
+
+#now let's create some realization of what the network things
+#digits look like
+
+targ=3  #the digit we want to get
+nsim=50
+simd=np.random.rand(nsim,td0.shape[1])
+sim_out=np.zeros([nsim,10])
+sim_out[:,targ]=1
+
+niter=50
+for i in range(niter):
+    wgrad,bgrad,xgrad=net.backprop(simd,sim_out)
+    simd=simd-0.25*xgrad[0].T
+    simd[simd<0]=0
+    simd[simd>1]=1
+
+pred,stuff=net.eval(simd)
+    
